@@ -6,11 +6,11 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/yogawahyudi7/social-media/common"
-	"github.com/yogawahyudi7/social-media/config"
-	"github.com/yogawahyudi7/social-media/constant"
-	"github.com/yogawahyudi7/social-media/helper"
-	"github.com/yogawahyudi7/social-media/repository"
+	"github.com/yogawahyudi7/hash-tag/common"
+	"github.com/yogawahyudi7/hash-tag/config"
+	"github.com/yogawahyudi7/hash-tag/constant"
+	"github.com/yogawahyudi7/hash-tag/helper"
+	"github.com/yogawahyudi7/hash-tag/repository"
 )
 
 type UserController struct {

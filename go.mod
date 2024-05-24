@@ -1,4 +1,4 @@
-module github.com/yogawahyudi7/social-media
+module github.com/yogawahyudi7/hash-tag
 
 go 1.22.0
 

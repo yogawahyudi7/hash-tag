@@ -4,8 +4,8 @@ import (
 	"net/http"
 
 	"github.com/gorilla/mux"
-	"github.com/yogawahyudi7/social-media/delivery/controller"
-	middlewares "github.com/yogawahyudi7/social-media/delivery/middleware"
+	"github.com/yogawahyudi7/hash-tag/delivery/controller"
+	middlewares "github.com/yogawahyudi7/hash-tag/delivery/middleware"
 )
 
 type PostRouter struct {

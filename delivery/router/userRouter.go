@@ -2,7 +2,7 @@ package router
 
 import (
 	"github.com/gorilla/mux"
-	"github.com/yogawahyudi7/social-media/delivery/controller"
+	"github.com/yogawahyudi7/hash-tag/delivery/controller"
 )
 
 type UserRouter struct {

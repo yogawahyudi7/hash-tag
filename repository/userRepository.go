@@ -3,7 +3,7 @@ package repository
 import (
 	"database/sql"
 
-	model "github.com/yogawahyudi7/social-media/model"
+	model "github.com/yogawahyudi7/hash-tag/model"
 )
 
 type UserRepository struct {

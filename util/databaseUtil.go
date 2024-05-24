@@ -6,7 +6,7 @@ import (
 	"log"
 
 	_ "github.com/lib/pq"
-	"github.com/yogawahyudi7/social-media/config"
+	"github.com/yogawahyudi7/hash-tag/config"
 )
 
 func NewDatabase(config *config.Server) *sql.DB {

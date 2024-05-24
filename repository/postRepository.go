@@ -4,8 +4,8 @@ import (
 	"database/sql"
 	"fmt"
 
-	"github.com/yogawahyudi7/social-media/helper"
-	model "github.com/yogawahyudi7/social-media/model"
+	"github.com/yogawahyudi7/hash-tag/helper"
+	model "github.com/yogawahyudi7/hash-tag/model"
 )
 
 type PostRepository struct {
