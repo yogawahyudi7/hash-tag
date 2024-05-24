@@ -43,14 +43,14 @@
 
 ### API Documentation
 
-![API Documentation](https://raw.githubusercontent.com/yogawahyudi7/hasg-tag/develop/doc/postman.png)
+![API Documentation](https://raw.githubusercontent.com/yogawahyudi7/hash-tag/develop/doc/postman.png)
 Application Programming Interface is available at [POSTMAN.](https://documenter.getpostman.com/view/16411992/2sA3QqfsDc)
 
 ## System Design
 
 ### ERD
 
-![HashTag- ERD](https://raw.githubusercontent.com/yogawahyudi7/POKEMON-FIGHT/develop/docs/erd3.png)
+![HashTag- ERD](https://raw.githubusercontent.com/yogawahyudi7/hash-tag/develop/doc/erd.png)
 
 ### Layered Architecture
 
@@ -69,6 +69,7 @@ After Golang installed, Follow this instructions
 
 ```bash
 $ git clone https://github.com/yogawahyudi7/hash-tag
+$ cd hash-tag
 $ .cmd/db-generator.sh
 $ go run main.go
 ```
