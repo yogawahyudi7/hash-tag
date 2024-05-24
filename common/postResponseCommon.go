@@ -39,6 +39,20 @@ func (r *StatusResponse) InternalServerError(err error) *StatusResponse {
 	return r
 }
 
+func (r *StatusResponse) Unauthorized(err error) *StatusResponse {
+	r.Code = 401
+	r.Message = err.Error()
+	r.Data = nil
+	return r
+}
+
+func (r *StatusResponse) Forbidden(err error) *StatusResponse {
+	r.Code = 403
+	r.Message = err.Error()
+	r.Data = nil
+	return r
+}
+
 type ResponsePost struct {
 	Id      int      `json:"id"`
 	Title   string   `json:"title"`

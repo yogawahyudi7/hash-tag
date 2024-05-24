@@ -2,6 +2,7 @@ package config
 
 import (
 	"os"
+	"time"
 
 	"github.com/joho/godotenv"
 	"github.com/labstack/gommon/log"
@@ -20,6 +21,10 @@ type Server struct {
 		DBName   string
 		SSLMode  string
 	}
+
+	SecretKey     string
+	TokenDuration string
+	TimeNow       time.Time
 }
 
 func (s *Server) Load() *Server {
@@ -40,6 +45,10 @@ func (s *Server) Load() *Server {
 	s.AppName = os.Getenv("APPNAME")
 	s.AppPort = os.Getenv("APPPORT")
 	s.AppEnv = os.Getenv("APPENV")
+
+	s.SecretKey = os.Getenv("SECRETKEY")
+	s.TokenDuration = os.Getenv("TOKENDURATION")
+	s.TimeNow = time.Now()
 
 	return s
 }

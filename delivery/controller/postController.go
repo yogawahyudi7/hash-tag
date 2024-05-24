@@ -261,3 +261,28 @@ func (pc *PostController) FindByTag(w http.ResponseWriter, r *http.Request) {
 
 	json.NewEncoder(w).Encode(pc.Response.StatusResponse.Success(constant.DataFound, postsResponse))
 }
+
+func (pc *PostController) PublishPost(w http.ResponseWriter, r *http.Request) {
+	w.Header().Set(constant.ContentType, constant.ApplicationJSON)
+
+	idStr := mux.Vars(r)["post_id"]
+	id, err := strconv.Atoi(idStr)
+	if err != nil {
+		json.NewEncoder(w).Encode(pc.Response.StatusResponse.BadRequest(constant.ErrorBadRequest))
+		return
+	}
+
+	rows, err := pc.PostRepository.PublishPost(id)
+	if err != nil {
+		json.NewEncoder(w).Encode(pc.Response.StatusResponse.InternalServerError(err))
+		return
+	}
+
+	if rows < 1 {
+		json.NewEncoder(w).Encode(pc.Response.StatusResponse.NotFound(errors.New(constant.ErrorNotFound)))
+		return
+	}
+
+	dataResponse := map[string]int{"id": id}
+	json.NewEncoder(w).Encode(pc.Response.StatusResponse.Success(constant.DataPostPublished, dataResponse))
+}

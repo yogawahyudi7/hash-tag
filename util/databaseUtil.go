@@ -10,7 +10,6 @@ import (
 )
 
 func NewDatabase(config *config.Server) *sql.DB {
-	// Konfigurasi koneksi database
 	connStr := fmt.Sprintf(
 		"host=%s port=%s user=%s password=%s dbname=%s sslmode=%s",
 		config.Database.Host,

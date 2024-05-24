@@ -541,3 +541,19 @@ func (r *PostRepository) FindByIds(ids []int) ([]model.Post, error) {
 
 	return posts, nil
 }
+
+func (r *PostRepository) PublishPost(id int) (int, error) {
+	query := `UPDATE post SET status = 'publish' WHERE id = $1`
+
+	sql, err := r.db.Exec(query, id)
+	if err != nil {
+		return 0, err
+	}
+
+	row, err := sql.RowsAffected()
+	if err != nil {
+		return 0, err
+	}
+
+	return int(row), nil
+}
